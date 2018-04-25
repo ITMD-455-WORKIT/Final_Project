@@ -1,4 +1,4 @@
-package com.example.tronicles.fitnesshelper;
+package com.example.joanc.workitapp;
 
 import android.content.Intent;
 import android.os.Bundle;
