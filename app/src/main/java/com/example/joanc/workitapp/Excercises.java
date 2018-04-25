@@ -1,4 +1,4 @@
-package com.example.andrzej.termprojecttest1;
+package com.example.joanc.workitapp;
 
 /**
  * Created by Andrzej on 4/16/2018.

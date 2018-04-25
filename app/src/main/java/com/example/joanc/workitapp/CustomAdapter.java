@@ -1,4 +1,4 @@
-package com.example.andrzej.termprojecttest1;
+package com.example.joanc.workitapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
