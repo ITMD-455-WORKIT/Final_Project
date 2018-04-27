@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.joanc.workitapp">
+    package="com.example.tronicles.fitnesshelper">
 
     <application
         android:allowBackup="true"
@@ -16,9 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MacroCalc"/>
-
-        <activity android:name=".MacroResults"/>
+        <activity android:name=".MacroCalc"></activity>
+        <activity android:name=".MacroResults"></activity>
+        <activity android:name=".ExcerciseActivity"></activity>
+        <activity android:name=".caloriecounter"></activity>
     </application>
 
 </manifest>
