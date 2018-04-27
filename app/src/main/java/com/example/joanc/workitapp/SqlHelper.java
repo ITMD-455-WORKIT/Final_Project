@@ -5,8 +5,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.content.ContentValues;
 import android.database.Cursor;
-import java.util.ArrayList;
-import java.util.List;
+
+import com.example.joanc.workitapp.Excercises;
+
 import java.util.ArrayList;
 import java.util.List;
 
