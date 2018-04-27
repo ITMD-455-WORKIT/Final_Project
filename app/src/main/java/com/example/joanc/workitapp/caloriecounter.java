@@ -30,17 +30,17 @@ public class caloriecounter extends AppCompatActivity {
         lunchcal = (EditText) findViewById(R.id.lunchcal);
         dinnercal = (EditText) findViewById(R.id.dinnercal);
         snackcal = (EditText) findViewById(R.id.snackcal);
-        btnTotal = (Button) findViewById(R.id.btnTotal);
+        btntotal = (Button) findViewById(R.id.btnTotal);
         total = (TextView) findViewById(R.id.total);
 
-        add.setOnClickListener(new View.OnClickListener() {
+        btntotal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int bfcal = Integer.parseInt(bfcal.getText().toString());
-                int lunchcal = Integer.parseInt(lunchcal.getText().toString());
-                int dinnercal = Integer.parseInt(dinnercal.getText().toString());
-                int snackcal = Integer.parseInt(snackcal.getText().toString());
-                int sum = bfcal + lunchcal + dinnercal + snackcal;
+                int bfcali = Integer.parseInt(bfcal.getText().toString());
+                int lunchcali = Integer.parseInt(lunchcal.getText().toString());
+                int dinnercali = Integer.parseInt(dinnercal.getText().toString());
+                int snackcali = Integer.parseInt(snackcal.getText().toString());
+                int sum = bfcali + lunchcali + dinnercali + snackcali;
                 total.setText("Total: " + String.valueOf(sum));
 
             }
