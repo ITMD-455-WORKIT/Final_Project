@@ -41,16 +41,16 @@ public class MainActivity extends AppCompatActivity {
         wroutine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), ExerciseActivity.class);
+                Intent i = new Intent(getApplicationContext(), ExcerciseActivity.class);
                 startActivity(i);
             }
         });
-        calendar.setOnClickListener(new View.OnClickListener() {
+        /*calendar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), calendar.class);
                 startActivity(i);
             }
-        });
+        });*/
     }
 }

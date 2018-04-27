@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 
+import com.example.joanc.workitapp.MacroResults;
+
 /**
  * Created by Tronicles on 4/16/2018.
  */

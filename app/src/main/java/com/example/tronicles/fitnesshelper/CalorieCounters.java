@@ -37,11 +37,11 @@ public class CalorieCounters extends AppCompatActivity {
                 btntotal = (Button) findViewById(R.id.btnTotal);
                 total = (TextView) findViewById(R.id.total);
 
-                int bfcals = Integer.parseInt(bfcal.getText().toString());
-                int lunchcals = Integer.parseInt(lunchcal.getText().toString());
-                int dinnercals = Integer.parseInt(dinnercal.getText().toString());
-                int snackcals = Integer.parseInt(snackcal.getText().toString());
-                int sum = bfcals+ lunchcals + dinnercals + snackcals;
+                int bfcalsi = Integer.parseInt(bfcal.getText().toString());
+                int lunchcalsi = Integer.parseInt(lunchcal.getText().toString());
+                int dinnercalsi = Integer.parseInt(dinnercal.getText().toString());
+                int snackcalsi = Integer.parseInt(snackcal.getText().toString());
+                int sum = bfcalsi+ lunchcalsi + dinnercalsi + snackcalsi;
                 total.setText("Total: " +sum);
             }
         });
