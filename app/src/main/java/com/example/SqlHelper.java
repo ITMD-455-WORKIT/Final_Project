@@ -1,4 +1,4 @@
-package com.example.flavin.finalproject;
+package com.example;
 
 import android.content.ContentValues;
 import android.content.Context;

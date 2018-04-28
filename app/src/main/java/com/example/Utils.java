@@ -1,4 +1,4 @@
-package com.example.flavin.finalproject;
+package com.example;
 
 /**
  * Created by Andrzej on 4/25/2018.
