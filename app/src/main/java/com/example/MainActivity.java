@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
     Button macrocalc;
     Button calcount;
     Button wroutine;
+    Button calendar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         macrocalc = findViewById(R.id.macrocalc);
         calcount = findViewById(R.id.calcount);
         wroutine = findViewById(R.id.wroutine);
-
+        calendar = findViewById(R.id.calendar);
 
         macrocalc.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +41,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), ExcerciseActivity.class);
+                startActivity(i);
+            }
+        });
+        calendar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Calendar.class);
                 startActivity(i);
             }
         });
