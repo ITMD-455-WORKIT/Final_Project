@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.CalendarView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.text.DateFormatSymbols;
 
@@ -24,8 +23,6 @@ public class Calendar extends AppCompatActivity {
             public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
 
                 String whatMonth = new DateFormatSymbols().getMonths()[month];
-                Toast.makeText(getApplicationContext(), "" + whatMonth, Toast.LENGTH_SHORT).show();
-
                 Intent intent = new Intent(getApplicationContext(), ZoomCalendar.class);
                 String day = Integer.toString(dayOfMonth);
                 Bundle b = new Bundle();
