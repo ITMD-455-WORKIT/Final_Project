@@ -69,8 +69,7 @@
         android:layout_alignLeft="@+id/lunchcal"
         android:layout_alignStart="@+id/lunchcal"
         android:ems="10"
-        android:inputType="number"
-        android:textSize="10sp" />
+        android:inputType="number" />
 
     <TextView
         android:id="@+id/textView7"
@@ -107,9 +106,7 @@
         android:layout_marginEnd="22dp"
         android:layout_marginRight="22dp"
         android:ems="10"
-        android:inputType="number"
-        android:textAlignment="textStart"
-        android:textSize="10sp" />
+        android:inputType="number" />
 
     <EditText
         android:id="@+id/dinnercal"
@@ -119,9 +116,7 @@
         android:layout_alignStart="@+id/lunchcal"
         android:layout_alignTop="@+id/editText7"
         android:ems="10"
-        android:inputType="number"
-        android:textAlignment="textStart"
-        android:textSize="10sp" />
+        android:inputType="number" />
 
     <EditText
         android:id="@+id/snackcal"
@@ -131,9 +126,7 @@
         android:layout_alignStart="@+id/dinnercal"
         android:layout_alignTop="@+id/editText11"
         android:ems="10"
-        android:inputType="number"
-        android:textAlignment="textStart"
-        android:textSize="10sp" />
+        android:inputType="number" />
 
     <EditText
         android:id="@+id/editText3"
@@ -189,7 +182,6 @@
         android:layout_alignStart="@+id/editText11"
         android:layout_marginLeft="12dp"
         android:layout_marginStart="12dp"
-        android:onClick="@string/bottom_sheet_behavior"
         android:text="TOTAL" />
 
     <TextView
