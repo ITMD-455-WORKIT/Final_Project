@@ -23,7 +23,7 @@ public class Calendar extends AppCompatActivity {
             @Override
             public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
 
-                String whatMonth = new DateFormatSymbols().getMonths()[month-1];
+                String whatMonth = new DateFormatSymbols().getMonths()[month];
                 Toast.makeText(getApplicationContext(), "" + whatMonth, Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(), ZoomCalendar.class);
