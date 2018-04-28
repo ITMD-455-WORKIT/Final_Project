@@ -1,4 +1,4 @@
-package com.example.tronicles.fitnesshelper;
+package com.example.flavin.finalproject;
 
 /**
  * Created by Andrzej on 4/16/2018.

@@ -1,4 +1,4 @@
-package com.example.joanc.workitapp;
+package com.example.flavin.finalproject;
 
 /**
  * Created by Andrzej on 4/25/2018.
