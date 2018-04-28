@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckedTextView;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -42,7 +43,7 @@ public class ZoomCalendar extends AppCompatActivity {
         tasks = findViewById(R.id.task);
 
         list = new ArrayList<>();
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list);
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice, list);
 
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,23 +62,28 @@ public class ZoomCalendar extends AppCompatActivity {
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(ZoomCalendar.this);
-                builder.setTitle("Remove Entry?");
-                builder.setMessage("Are you want to delete this entry?");
+                CheckedTextView checkedTextView = ((CheckedTextView)view);
+                checkedTextView.setChecked(!checkedTextView.isChecked());
 
-                builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        adapter.remove(adapter.getItem(position));
-                    }
-                });
-                builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-                AlertDialog alert = builder.create();
-                alert.show();
+                if(checkedTextView.isChecked()) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(ZoomCalendar.this);
+                    builder.setTitle("Remove Entry?");
+                    builder.setMessage("Are you want to delete this entry?");
+
+                    builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            adapter.remove(adapter.getItem(position));
+                        }
+                    });
+                    builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+                    AlertDialog alert = builder.create();
+                    alert.show();
+                }
             }
         });
 
