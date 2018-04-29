@@ -30,11 +30,13 @@ Our last page is going to calculate the macro calories.
 2.	April 16 : Each group member must finish their assigned page. This includes designing the page as well as each person will design a dashboard.
 3.	April 23: Group will have to complete the development of the pages that were assigned. We will have to be able to join all pages together as well as test the application.
 4.	April 25: All team members will work on the presentation that is due on Friday.
+5.  April 29: Turn in all project files.
+6.  May 2: Present our work.
 
 ### Breaking Down The Work
 *	Each person is going to be working on a page 
 *	Consuelo: Calorie Counter page, work on Documentation 
 *	Andy: Workout Routine
-*	Jimmy: Calendar
-*	Matthew: Macro Counter
+*	Jimmy: Macro Counter
+*	Matthew: Calendar
 *	Everyone is going to build a dashboard page 
