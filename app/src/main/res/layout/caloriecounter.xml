@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -66,10 +67,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/editText3"
-        android:layout_alignLeft="@+id/lunchcal"
         android:layout_alignStart="@+id/lunchcal"
         android:ems="10"
-        android:inputType="number" />
+        android:inputType="number"
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/textView7"
@@ -99,34 +100,32 @@
         android:id="@+id/lunchcal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText6"
-        android:layout_alignBottom="@+id/editText6"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="22dp"
-        android:layout_marginRight="22dp"
+        android:layout_alignStart="@+id/total"
+        android:layout_below="@+id/textView6"
         android:ems="10"
-        android:inputType="number" />
+        android:inputType="number"
+        android:textAlignment="center" />
 
     <EditText
         android:id="@+id/dinnercal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/lunchcal"
         android:layout_alignStart="@+id/lunchcal"
         android:layout_alignTop="@+id/editText7"
         android:ems="10"
-        android:inputType="number" />
+        android:inputType="number"
+        android:textAlignment="center" />
 
     <EditText
         android:id="@+id/snackcal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/dinnercal"
-        android:layout_alignStart="@+id/dinnercal"
-        android:layout_alignTop="@+id/editText11"
+        android:layout_alignBaseline="@+id/editText11"
+        android:layout_alignBottom="@+id/editText11"
+        android:layout_alignStart="@+id/total"
         android:ems="10"
-        android:inputType="number" />
+        android:inputType="number"
+        android:textAlignment="center" />
 
     <EditText
         android:id="@+id/editText3"
@@ -189,8 +188,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/textView4"
-        android:layout_alignRight="@+id/textView4"
         android:layout_below="@+id/editText11"
+        android:layout_marginTop="13dp"
         android:text="Answer"
         android:textSize="24sp" />
 
