@@ -1,4 +1,4 @@
-package com.example.joanc.workitapp;
+package com.example;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,7 +12,7 @@ import android.widget.TextView;
  */
 
 
-public class caloriecounter extends AppCompatActivity {
+public class CalorieCounters extends AppCompatActivity {
 
     private EditText bfcal;
     private EditText lunchcal;
@@ -24,7 +24,7 @@ public class caloriecounter extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.caloriecounter);
 
         bfcal = (EditText) findViewById(R.id.bfcal);
         lunchcal = (EditText) findViewById(R.id.lunchcal);
@@ -36,13 +36,13 @@ public class caloriecounter extends AppCompatActivity {
         btntotal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int bfcali = Integer.parseInt(bfcal.getText().toString());
-                int lunchcali = Integer.parseInt(lunchcal.getText().toString());
-                int dinnercali = Integer.parseInt(dinnercal.getText().toString());
-                int snackcali = Integer.parseInt(snackcal.getText().toString());
-                int sum = bfcali + lunchcali + dinnercali + snackcali;
-                total.setText("Total: " + String.valueOf(sum));
 
+                int bfcalsi = Integer.parseInt(bfcal.getText().toString());
+                int lunchcalsi = Integer.parseInt(lunchcal.getText().toString());
+                int dinnercalsi = Integer.parseInt(dinnercal.getText().toString());
+                int snackcalsi = Integer.parseInt(snackcal.getText().toString());
+                int sum = bfcalsi+ lunchcalsi + dinnercalsi + snackcalsi;
+                total.setText("Total: " +sum);
             }
         });
 

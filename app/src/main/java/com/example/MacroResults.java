@@ -1,4 +1,4 @@
-package com.example.joanc.workitapp;
+package com.example;
 
 import android.content.Intent;
 import android.os.Bundle;

@@ -1,22 +1,22 @@
-package com.example.joanc.workitapp;
+package com.example;
 
 /**
  * Created by Andrzej on 4/25/2018.
  */
 
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import java.util.List;
-
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
-import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-import android.widget.Button;
+import android.widget.Toast;
+
+import java.util.List;
 
 public class ExcerciseActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     ListView listView;

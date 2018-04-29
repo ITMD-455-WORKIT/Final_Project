@@ -1,18 +1,17 @@
-package com.example.joanc.workitapp;
+package com.example;
 
+import android.app.Activity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.app.Activity;
-import android.view.LayoutInflater;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
-import android.widget.Toast;
-
-public class CustomAdapter extends ArrayAdapter<com.example.joanc.workitapp.Excercises> {
+public class CustomAdapter extends ArrayAdapter<Excercises> {
 
     private List<Excercises> Excercises;
     private final Activity mContext;

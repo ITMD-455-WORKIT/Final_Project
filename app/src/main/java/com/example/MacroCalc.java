@@ -1,4 +1,4 @@
-package com.example.joanc.workitapp;
+package com.example;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,8 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
-
-import com.example.joanc.workitapp.MacroResults;
 
 /**
  * Created by Tronicles on 4/16/2018.

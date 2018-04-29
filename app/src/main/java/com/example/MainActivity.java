@@ -1,8 +1,8 @@
-package com.example.joanc.workitapp;
+package com.example;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
@@ -12,7 +12,6 @@ public class MainActivity extends AppCompatActivity {
     Button calcount;
     Button wroutine;
     Button calendar;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         calcount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), caloriecounter.class);
+                Intent i = new Intent(getApplicationContext(), CalorieCounters.class);
                 startActivity(i);
             }
         });
@@ -45,12 +44,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        /*calendar.setOnClickListener(new View.OnClickListener() {
+        calendar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), calendar.class);
+                Intent i = new Intent(getApplicationContext(), Calendar.class);
                 startActivity(i);
             }
-        });*/
+        });
     }
 }
