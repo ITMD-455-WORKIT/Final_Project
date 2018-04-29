@@ -42,6 +42,13 @@ public class ZoomCalendar extends AppCompatActivity {
         hour = findViewById(R.id.when);
         tasks = findViewById(R.id.task);
 
+        Bundle b = getIntent().getExtras();
+        zoomedDay = b.getString("day");
+        backMonth = b.getString("month");
+
+        day.setText(zoomedDay);
+        month.setText("< Back to " + backMonth);
+
         list = new ArrayList<>();
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice, list);
 
@@ -86,13 +93,6 @@ public class ZoomCalendar extends AppCompatActivity {
                 }
             }
         });
-
-        Bundle b = getIntent().getExtras();
-        zoomedDay = b.getString("day");
-        backMonth = b.getString("month");
-
-        day.setText(zoomedDay);
-        month.setText("< Back to " + backMonth);
 
         month.setOnClickListener(new View.OnClickListener() {
             @Override
