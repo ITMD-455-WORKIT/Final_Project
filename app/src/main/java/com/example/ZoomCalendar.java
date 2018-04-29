@@ -16,7 +16,7 @@ import java.util.List;
 
 public class ZoomCalendar extends AppCompatActivity {
     TextView day;
-    TextView month;
+    Button month;
     String zoomedDay;
     String backMonth;
     EditText hour;
@@ -42,7 +42,7 @@ public class ZoomCalendar extends AppCompatActivity {
         backMonth = b.getString("month");
 
         day.setText(zoomedDay);
-        month.setText("< Back to " + backMonth);
+        month.setText("< " + backMonth);
 
         final calendarTasks db = new calendarTasks(this);
         List<Tasks> list = db.getSpecificDay(zoomedDay);

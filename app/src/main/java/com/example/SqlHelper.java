@@ -30,7 +30,7 @@ public class SqlHelper extends SQLiteOpenHelper {
     public SqlHelper(Context context) {
         super(context, DATABASE_Name, null, DATABASE_VERSION);
     }
-
+//method that creates the databse
     @Override
     public void onCreate(SQLiteDatabase db) {
         String CREATE_CONTACTS_TABLE = "CREATE TABLE " + TABLE_ExcercisesS + "("
