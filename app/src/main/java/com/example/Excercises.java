@@ -2,19 +2,23 @@ package com.example;
 
 /**
  * Created by Andrzej on 4/16/2018.
+ *
+ *This class initializes get and set methods for exercises
  */
 
 public class Excercises {
+   //setting variable names
     private int id;
     private String name;
     private int excerciselength;
     private String timetoexcercise;
 
 
-
+//consrtuctor method
     public Excercises()
     {
     }
+
     public Excercises(int id,String name, int excerciselength,String timetoexcercise)
     {
         this.id=id;
@@ -28,7 +32,7 @@ public class Excercises {
         this.excerciselength=excerciselengths;
         this.timetoexcercise=timetoexcercise;
     }
-
+//methods seting the values
     public void setId(int id) {
         this.id = id;
     }
@@ -38,7 +42,7 @@ public class Excercises {
     public void setTimetoexcercise(String timetoexcercise) {
         this.timetoexcercise = timetoexcercise;
     }
-
+//initializing the get values for exercises
     public void setExcerciselength(int excerciselength) {
         this.excerciselength = excerciselength;
     }
