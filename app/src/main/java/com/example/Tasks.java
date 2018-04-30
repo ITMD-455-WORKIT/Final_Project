@@ -1,5 +1,6 @@
 package com.example;
 
+//Getters and Setters for calendar database
 public class Tasks {
     private int id;
     private String day;

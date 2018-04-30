@@ -15,8 +15,10 @@ public class CalendarAdapter extends ArrayAdapter<Tasks> {
     private List<Tasks> tasks;
     private final Activity cont;
 
+    //Makes database object
     final calendarTasks db = new calendarTasks(getContext());
 
+    //Custom adapter for calendar database
     public CalendarAdapter(List<Tasks> tasks, Activity cont) {
         super(cont, R.layout.routine, tasks);
         this.tasks = tasks;
@@ -38,6 +40,7 @@ public class CalendarAdapter extends ArrayAdapter<Tasks> {
         }
         final Tasks tasks =getItem(position);
 
+        //Outline view for custom adapter
         TextView taskName = listitemView.findViewById(R.id.textView3);
         TextView taskTime = listitemView.findViewById(R.id.textView5);
         Button deleteBtn = listitemView.findViewById(R.id.button2);
@@ -58,6 +61,7 @@ public class CalendarAdapter extends ArrayAdapter<Tasks> {
         return listitemView;
     }
 
+    //Removes line from list
     public void removeItem(int position){
         tasks.remove(position);
         notifyDataSetChanged();
