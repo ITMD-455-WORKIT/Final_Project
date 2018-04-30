@@ -5,6 +5,7 @@ package com.example;
  */
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -18,7 +19,9 @@ import android.widget.Toast;
 
 import java.util.List;
 
+//main method making exercise routine part of code work
 public class ExcerciseActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    //seting variables
     ListView listView;
     ListAdapter listAdapter;
     String ExcercisesName[]=new String [] {"Pushups", "Situps", "Weights"};
@@ -32,19 +35,22 @@ public class ExcerciseActivity extends AppCompatActivity implements AdapterView.
             41,42,43,44,45,46,47,48,49,50,
             51,52,53,54,55,56,57,58,59,60};
     String Time[]=new String[] {"AM","PM"};
-    Button Button1, Button2;
+    Button Button1, Button2, back;
+    //wehn code begins on create method automaticaly starts code
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_excercises);
+
         Button1 = (Button) findViewById(R.id.button);//get id of button 1
         Button2 = (Button) findViewById(R.id.button2);//get id of button 2
-
+        back = findViewById(R.id.back);
+//seting spinners
         final Spinner spinner=(Spinner) findViewById(R.id.spinner);//Excercise name spinner
         final Spinner spinner2=(Spinner) findViewById(R.id.spinner2);//Set spinner
         final Spinner spinner3=(Spinner) findViewById(R.id.spinner3);//Hour spinner
         final Spinner spinner4=(Spinner) findViewById(R.id.spinner4);//AM/PM spinner
-        final Spinner spinner5=(Spinner) findViewById(R.id.spinner5);
+        final Spinner spinner5=(Spinner) findViewById(R.id.spinner5);//minute setting spinner
         //Creating the ArrayAdapter instance having the array lists
         ArrayAdapter spin1 = new ArrayAdapter(this,android.R.layout.simple_spinner_item,ExcercisesName);//setting array adapter spin 1 with values of ExcercisesName
         spin1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -63,12 +69,13 @@ public class ExcerciseActivity extends AppCompatActivity implements AdapterView.
         spinner3.setAdapter(spin3);
         spinner4.setAdapter(spin4);
         spinner5.setAdapter(spin5);
+        //calling sqlDatabse and customadpater methods
         final SqlHelper db = new SqlHelper(this);
         List<Excercises> list = db.getAllExcercisess();
         listView = (ListView)findViewById(R.id.routinelist);
         listAdapter = new CustomAdapter(list,ExcerciseActivity.this );
         listView.setAdapter(listAdapter);
-
+//method that when add button otherwise known as button1 is pressed it adds data to database
         Button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -82,6 +89,7 @@ public class ExcerciseActivity extends AppCompatActivity implements AdapterView.
                 String formatTime = Utils.formatTime(spinner1SlctdVal3, spinner1SlctdVal5,spinner1SlctdVal4);
 
                 // String formatTime = spinner1SlctdVal3 + ":" + spinner1SlctdVal5 + ":" + spinner1SlctdVal4;
+                //ethod adding exercises to database
                 db.addExcercise(new Excercises(spinner1SlctdVal, spinner1SlctdVal2,formatTime));
 //figure out how to reloed databse in real time
                 //namesAdapter.notifyDataSetChanged();
@@ -93,6 +101,14 @@ public class ExcerciseActivity extends AppCompatActivity implements AdapterView.
                 listAdapter = new CustomAdapter(list,ExcerciseActivity.this );
                 listView.setAdapter(listAdapter);
                 //listView.invalidateViews();
+            }
+        });
+        //method to return to main page
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
             }
         });
         /*  Button2.setOnClickListener(new View.OnClickListener() {

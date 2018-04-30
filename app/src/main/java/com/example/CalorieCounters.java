@@ -1,5 +1,6 @@
 package com.example;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -20,6 +21,7 @@ public class CalorieCounters extends AppCompatActivity {
     private EditText snackcal;
     private Button btntotal;
     private TextView total;
+    private Button back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +34,7 @@ public class CalorieCounters extends AppCompatActivity {
         snackcal = (EditText) findViewById(R.id.snackcal);
         btntotal = (Button) findViewById(R.id.btnTotal);
         total = (TextView) findViewById(R.id.total);
-
+        back = findViewById(R.id.back);
         btntotal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,6 +45,14 @@ public class CalorieCounters extends AppCompatActivity {
                 int snackcalsi = Integer.parseInt(snackcal.getText().toString());
                 int sum = bfcalsi+ lunchcalsi + dinnercalsi + snackcalsi;
                 total.setText("Total: " +sum);
+            }
+        });
+        //method to return to main page
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
             }
         });
 
