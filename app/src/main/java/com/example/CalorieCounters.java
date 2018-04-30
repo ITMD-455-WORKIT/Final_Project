@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 public class CalorieCounters extends AppCompatActivity {
 
+    //Variables that I am going to use
     private EditText bfcal;
     private EditText lunchcal;
     private EditText dinnercal;
@@ -38,13 +39,14 @@ public class CalorieCounters extends AppCompatActivity {
         btntotal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //This is going to get the information from users 
 
                 int bfcalsi = Integer.parseInt(bfcal.getText().toString());
                 int lunchcalsi = Integer.parseInt(lunchcal.getText().toString());
                 int dinnercalsi = Integer.parseInt(dinnercal.getText().toString());
                 int snackcalsi = Integer.parseInt(snackcal.getText().toString());
                 int sum = bfcalsi+ lunchcalsi + dinnercalsi + snackcalsi;
-                total.setText("Total: " +sum);
+                total.setText("Total: " +sum); //This is the formula to add the calories.
             }
         });
         //method to return to main page
