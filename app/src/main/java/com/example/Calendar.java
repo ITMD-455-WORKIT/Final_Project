@@ -23,10 +23,15 @@ public class Calendar extends AppCompatActivity {
             @Override
             public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
 
+                //Getting what month is selected
                 String whatMonth = new DateFormatSymbols().getMonths()[month];
+
+                //Changing to zoomedCalendar page
                 Intent intent = new Intent(getApplicationContext(), ZoomCalendar.class);
                 String day = Integer.toString(dayOfMonth);
                 Bundle b = new Bundle();
+
+                //Sending over data
                 b.putString("day", day);
                 b.putString("month", whatMonth);
                 intent.putExtras(b);
@@ -34,6 +39,7 @@ public class Calendar extends AppCompatActivity {
             }
         });
 
+        //Listener for homepage button
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
