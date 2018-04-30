@@ -37,17 +37,23 @@ public class ZoomCalendar extends AppCompatActivity {
         hour = findViewById(R.id.when);
         tasks = findViewById(R.id.task);
 
+        //Getting data from calendar
         Bundle b = getIntent().getExtras();
         zoomedDay = b.getString("day");
         backMonth = b.getString("month");
 
+        //Setting received data
         day.setText(zoomedDay);
         month.setText("< " + backMonth);
 
+        //Makes database object
         final calendarTasks db = new calendarTasks(this);
+
+        //Calls database and puts in results to a list
         List<Tasks> list = db.getSpecificDay(zoomedDay);
         listAdapter = new CalendarAdapter(list,ZoomCalendar.this );
 
+        //Listener for add button that adds new entry
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,29 +66,7 @@ public class ZoomCalendar extends AppCompatActivity {
         });
         listView.setAdapter(listAdapter);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View view, final int position, final long id) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(ZoomCalendar.this);
-                builder.setTitle("Remove Entry?");
-                builder.setMessage("Are you want to delete this entry?");
-
-                builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        int i = (int)id;
-                        db.deleteTask(i);
-                    }
-                });
-                builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-                AlertDialog alert = builder.create();
-                alert.show();
-            }
-        });
-
+        //Back button listener
         month.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
