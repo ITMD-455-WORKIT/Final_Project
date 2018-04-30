@@ -39,7 +39,7 @@ public class CalorieCounters extends AppCompatActivity {
         btntotal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //This is going to get the information from users 
+                //This is going to get the information from users
 
                 int bfcalsi = Integer.parseInt(bfcal.getText().toString());
                 int lunchcalsi = Integer.parseInt(lunchcal.getText().toString());
