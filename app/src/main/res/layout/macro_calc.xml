@@ -315,4 +315,13 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
+    <Button
+        android:id="@+id/back"
+        style="@android:style/Widget.Material.Light.Button.Borderless.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/light"
+        android:text="HomePage" />
+
 </RelativeLayout>

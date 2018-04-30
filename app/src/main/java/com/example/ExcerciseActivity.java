@@ -5,6 +5,7 @@ package com.example;
  */
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -34,7 +35,7 @@ public class ExcerciseActivity extends AppCompatActivity implements AdapterView.
             41,42,43,44,45,46,47,48,49,50,
             51,52,53,54,55,56,57,58,59,60};
     String Time[]=new String[] {"AM","PM"};
-    Button Button1, Button2;
+    Button Button1, Button2, back;
     //wehn code begins on create method automaticaly starts code
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +44,7 @@ public class ExcerciseActivity extends AppCompatActivity implements AdapterView.
 
         Button1 = (Button) findViewById(R.id.button);//get id of button 1
         Button2 = (Button) findViewById(R.id.button2);//get id of button 2
+        back = findViewById(R.id.back);
 //seting spinners
         final Spinner spinner=(Spinner) findViewById(R.id.spinner);//Excercise name spinner
         final Spinner spinner2=(Spinner) findViewById(R.id.spinner2);//Set spinner
@@ -99,6 +101,14 @@ public class ExcerciseActivity extends AppCompatActivity implements AdapterView.
                 listAdapter = new CustomAdapter(list,ExcerciseActivity.this );
                 listView.setAdapter(listAdapter);
                 //listView.invalidateViews();
+            }
+        });
+        //method to return to main page
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
             }
         });
         /*  Button2.setOnClickListener(new View.OnClickListener() {
