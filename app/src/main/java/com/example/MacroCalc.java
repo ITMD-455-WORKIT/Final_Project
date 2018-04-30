@@ -16,7 +16,7 @@ public class MacroCalc extends AppCompatActivity {
 
     EditText editAge, editWeight, feet, inches;
     RadioButton male, female, sedentary, light, moderate, extreme, losemore, loseless, maintain, gainmore, gainless;
-    Button calc;
+    Button calc, back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +39,7 @@ public class MacroCalc extends AppCompatActivity {
         gainmore = findViewById(R.id.gainmore);
         maintain = findViewById(R.id.maintain);
         calc = findViewById(R.id.calc);
+        back = findViewById(R.id.back);
 
         calc.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -775,6 +776,14 @@ public class MacroCalc extends AppCompatActivity {
                 }
 
                 intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
+        //method to return to main page
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
         });
